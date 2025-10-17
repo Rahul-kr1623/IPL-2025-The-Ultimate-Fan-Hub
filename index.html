@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2025: The Ultimate Fan Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="Logos/ipl_logo.jpg" />
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="Logos/Logo.png" alt="IPL 2025 Logo"></div>
+        <div class="separator"></div>
+    </header>
+
+    <div class="trophy-container">
+        <img src="Logos/IPL_Trophy.png" alt="IPL Trophy" class="trophy">
+    </div>
+    <div class="main-container">
+
+        <!-- Main container for the switchable views -->
+        <div class="results-container">
+            <!-- The new Tab Navigation -->
+            <div class="view-selector">
+                <button id="schedule-btn" class="view-btn active" onclick="showView('schedule-view')">Schedule</button>
+                <button id="points-table-btn" class="view-btn" onclick="showView('points-table-view')">Points
+                    Table</button>
+                <button id="playoffs-btn" class="view-btn" onclick="showView('playoffs-view')">Playoffs</button>
+            </div>
+
+            <!-- View 1: Match Schedule -->
+            <div id="schedule-view" class="view-content">
+                <table class="match-table">
+                    <thead>
+                        <tr>
+                            <th>Match No.</th>
+                            <th>Teams</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Venue</th>
+                            <th>Scorecard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="Logos/kkr_logo.png" alt="KKR" class="team-logo"> KKR vs <img
+                                    src="Logos/rcb_logo.png" alt="RCB" class="team-logo"> RCB</td>
+                            <td>Sat, Mar 22</td>
+                            <td>7:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(0)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="Logos/srh_logo.jpg" alt="SRH" class="team-logo"> SRH vs <img
+                                    src="Logos/rr_logo.jpg" alt="RR" class="team-logo"> RR</td>
+                            <td>Sun, Mar 23</td>
+                            <td>3:30 PM</td>
+                            <td>Rajiv Gandhi Intl. Stadium, Hyderabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(1)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="Logos/mi_logo.jpg" alt="MI" class="team-logo"> MI vs <img src="Logos/csk_logo.jpg"
+                                    alt="CSK" class="team-logo"> CSK</td>
+                            <td>Sun, Mar 23</td>
+                            <td>7:30 PM</td>
+                            <td>MA Chidambaram Stadium, Chennai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(2)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><img src="Logos/lsg_logo.jpg" alt="LSG" class="team-logo"> LSG vs <img src="Logos/dc_logo.png"
+                                    alt="DC" class="team-logo"> DC</td>
+                            <td>Mon, Mar 24</td>
+                            <td>7:30 PM</td>
+                            <td>Dr YS Rajasekhara Reddy Stadium, Visakhapatnam</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(3)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><img src="Logos/pbks_logo.jpg" alt="PBKS" class="team-logo"> PBKS vs <img
+                                    src="Logos/gt_logo.jpg" alt="GT" class="team-logo"> GT</td>
+                            <td>Tue, Mar 25</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(4)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><img src="Logos/rr_logo.jpg" alt="RR" class="team-logo"> RR vs <img
+                                    src="Logos/kkr_logo.png" alt="KKR" class="team-logo"> KKR</td>
+                            <td>Wed, Mar 26</td>
+                            <td>7:30 PM</td>
+                            <td>ACA Stadium, Guwahati</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(5)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><img src="Logos/srh_logo.jpg" alt="SRH" class="team-logo"> SRH vs <img
+                                    src="Logos/lsg_logo.jpg" alt="LSG" class="team-logo"> LSG</td>
+                            <td>Thu, Mar 27</td>
+                            <td>7:30 PM</td>
+                            <td>Rajiv Gandhi Intl. Stadium, Hyderabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(6)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><img src="Logos/csk_logo.jpg" alt="CSK" class="team-logo"> CSK vs <img
+                                    src="Logos/rcb_logo.png" alt="RCB" class="team-logo"> RCB</td>
+                            <td>Fri, Mar 28</td>
+                            <td>7:30 PM</td>
+                            <td>MA Chidambaram Stadium, Chennai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(7)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><img src="Logos/gt_logo.jpg" alt="GT" class="team-logo"> GT vs <img src="Logos/mi_logo.jpg" alt="MI"
+                                    class="team-logo"> MI</td>
+                            <td>Sat, Mar 29</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(8)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><img src="Logos/dc_logo.png" alt="DC" class="team-logo"> DC vs <img src="Logos/srh_logo.jpg"
+                                    alt="SRH" class="team-logo"> SRH</td>
+                            <td>Sun, Mar 30</td>
+                            <td>3:30 PM</td>
+                            <td>Dr. Y.S. Rajasekhara Reddy Stadium, Visakhapatnam</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(9)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><img src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR vs <img src="Logos/csk_logo.jpg"
+                                    class="team-logo" alt="CSK"> CSK</td>
+                            <td>Sun, Mar 30</td>
+                            <td>7:30 PM</td>
+                            <td>ACA Stadium, Guwahati</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(10)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo" alt="MI"> MI vs <img src="Logos/kkr_logo.png"
+                                    class="team-logo" alt="KKR"> KKR</td>
+                            <td>Mon, Mar 31</td>
+                            <td>7:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(11)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG vs <img
+                                    src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS</td>
+                            <td>Tue, Apr 1</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(12)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo" alt="GT"> GT</td>
+                            <td>Wed, Apr 2</td>
+                            <td>7:30 PM</td>
+                            <td>M Chinnaswamy Stadium, Bengaluru</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(13)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img
+                                    src="Logos/srh_logo.jpg" class="team-logo" alt="SRH"> SRH</td>
+                            <td>Thu, Apr 3</td>
+                            <td>7:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(14)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo" alt="MI"> MI</td>
+                            <td>Fri, Apr 4</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(15)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK vs <img src="Logos/dc_logo.png"
+                                    class="team-logo" alt="DC"> DC</td>
+                            <td>Sat, Apr 5</td>
+                            <td>3:30 PM</td>
+                            <td>MA Chidambaran Stadium, Chennai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(16)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS vs <img
+                                    src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR</td>
+                            <td>Sat, Apr 5</td>
+                            <td>7:30 PM</td>
+                            <td>New PCA Stadium, Chandigarh</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(17)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo" alt="SRH"> SRH vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo" alt="GT"> GT</td>
+                            <td>Sun, Apr 6</td>
+                            <td>7:30 PM</td>
+                            <td>Rajiv Gandhi International Stadium, Hyderabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(18)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo" alt="MI"> MI vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo" alt="RCB"> RCB</td>
+                            <td>Mon, Apr 7</td>
+                            <td>7:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(19)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img
+                                    src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG</td>
+                            <td>Tue, Apr 8</td>
+                            <td>3:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(20)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK vs <img
+                                    src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS</td>
+                            <td>Tue, Apr 8</td>
+                            <td>7:30 PM</td>
+                            <td>New PCA Stadium, Chandigarh</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(21)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td><img src="Logos/gt_logo.jpg" class="team-logo" alt="GT"> GT vs <img src="Logos/rr_logo.jpg"
+                                    class="team-logo" alt="RR"> RR</td>
+                            <td>Wed, Apr 9</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(22)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td><img src="Logos/dc_logo.png" class="team-logo" alt="DC"> DC vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo" alt="RCB"> RCB</td>
+                            <td>Thu, Apr 10</td>
+                            <td>7:30 PM</td>
+                            <td>M Chinnaswamy Stadium, Bengaluru</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(23)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK vs <img
+                                    src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR</td>
+                            <td>Fri, Apr 11</td>
+                            <td>7:30 PM</td>
+                            <td>MA Chidambaram Stadium, Chennai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(24)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo" alt="GT"> GT</td>
+                            <td>Sat, Apr 12</td>
+                            <td>3:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(25)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo" alt="SRH"> SRH vs <img
+                                    src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS</td>
+                            <td>Sat, Apr 12</td>
+                            <td>7:30 PM</td>
+                            <td>Rajiv Gandhi International Stadium, Hyderabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(26)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td><img src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR vs <img
+                                    src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB</td>
+                            <td>Sun, Apr 13</td>
+                            <td>3:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(27)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td><img src="Logos/dc_logo.png" class="team-logo" alt="DC"> DC vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo" alt="MI"> MI</td>
+                            <td>Sun, Apr 13</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(28)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG vs <img src="Logos/csk_logo.jpg"
+                                    class="team-logo" alt="CSK"> CSK</td>
+                            <td>Mon, Apr 14</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(29)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS vs <img
+                                    src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR</td>
+                            <td>Tue, Apr 15</td>
+                            <td>7:30 PM</td>
+                            <td>New PCA Stadium, Chandigarh</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(30)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td><img src="Logos/dc_logo.png" class="team-logo" alt="DC"> DC vs <img src="Logos/rr_logo.jpg"
+                                    class="team-logo" alt="RR"> RR</td>
+                            <td>Wed, Apr 16</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(31)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo" alt="MI"> MI vs <img src="Logos/srh_logo.jpg"
+                                    class="team-logo" alt="SRH"> SRH</td>
+                            <td>Thu, Apr 17</td>
+                            <td>7:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(32)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB vs <img
+                                    src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS</td>
+                            <td>Fri, Apr 18</td>
+                            <td>7:30 PM</td>
+                            <td>M Chinnaswamy Stadium, Bengaluru</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(33)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td><img src="Logos/gt_logo.jpg" class="team-logo" alt="GT"> GT vs <img src="Logos/dc_logo.png"
+                                    class="team-logo" alt="DC"> DC</td>
+                            <td>Sat, Apr 19</td>
+                            <td>3:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(34)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td><img src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR vs <img src="Logos/lsg_logo.jpg"
+                                    class="team-logo" alt="LSG"> LSG</td>
+                            <td>Sat, Apr 19</td>
+                            <td>7:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(35)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS vs <img
+                                    src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB</td>
+                            <td>Sun, Apr 20</td>
+                            <td>3:30 PM</td>
+                            <td>New PCA Stadium, Chandigarh</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(36)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo" alt="MI"> MI vs <img src="Logos/csk_logo.jpg"
+                                    class="team-logo" alt="CSK"> CSK</td>
+                            <td>Sun, Apr 20</td>
+                            <td>7:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(37)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo" alt="GT"> GT</td>
+                            <td>Mon, Apr 21</td>
+                            <td>7:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(38)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG vs <img src="Logos/dc_logo.png"
+                                    class="team-logo" alt="DC"> DC</td>
+                            <td>Tue, Apr 22</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(39)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo" alt="SRH"> SRH vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo" alt="MI"> MI</td>
+                            <td>Wed, Apr 23</td>
+                            <td>7:30 PM</td>
+                            <td>Rajiv Gandhi International Stadium, Hyderabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(40)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB vs <img
+                                    src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR</td>
+                            <td>Thu, Apr 24</td>
+                            <td>7:30 PM</td>
+                            <td>M Chinnaswamy Stadium, Bengaluru</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(41)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK vs <img
+                                    src="Logos/srh_logo.jpg" class="team-logo" alt="SRH"> SRH</td>
+                            <td>Fri, Apr 25</td>
+                            <td>7:30 PM</td>
+                            <td>MA Chidambaram Stadium, Chennai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(42)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img
+                                    src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS</td>
+                            <td>Sat, Apr 26</td>
+                            <td>7:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(43)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo" alt="MI"> MI</td>
+                            <td>Sun, Apr 27</td>
+                            <td>3:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(44)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB vs <img src="Logos/dc_logo.png"
+                                    class="team-logo" alt="DC"> DC</td>
+                            <td>Sun, Apr 27</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(45)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td><img src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo" alt="GT"> GT</td>
+                            <td>Mon, Apr 28</td>
+                            <td>7:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(46)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img src="Logos/dc_logo.png"
+                                    class="team-logo" alt="DC"> DC</td>
+                            <td>Tue, Apr 29</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(47)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK vs <img
+                                    src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS</td>
+                            <td>Wed, Apr 30</td>
+                            <td>7:30 PM</td>
+                            <td>MA Chidambaram Stadium, Chennai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(48)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td><img src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo" alt="MI"> MI</td>
+                            <td>Thu, May 01</td>
+                            <td>7:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(49)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td><img src="Logos/gt_logo.jpg" class="team-logo" alt="GT"> GT vs <img src="Logos/srh_logo.jpg"
+                                    class="team-logo" alt="SRH"> SRH</td>
+                            <td>Fri, May 02</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(50)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo" alt="RCB"> RCB vs <img
+                                    src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK</td>
+                            <td>Sat, May 03</td>
+                            <td>7:30 PM</td>
+                            <td>M Chinnaswamy Stadium, Bengaluru</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(51)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img
+                                    src="Logos/rr_logo.jpg" class="team-logo" alt="RR"> RR</td>
+                            <td>Sun, May 04</td>
+                            <td>3:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(52)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo" alt="PBKS"> PBKS vs <img
+                                    src="Logos/lsg_logo.jpg" class="team-logo" alt="LSG"> LSG</td>
+                            <td>Sun, May 04</td>
+                            <td>7:30 PM</td>
+                            <td>HPCA Stadium, Dharamshala</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(53)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo" alt="SRH"> SRH vs <img src="Logos/dc_logo.png"
+                                    class="team-logo" alt="DC"> DC</td>
+                            <td>Mon, May 05</td>
+                            <td>7:30 PM</td>
+                            <td>Rajiv Gandhi International Stadium, Hyderabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(54)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo" alt="MI"> MI vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo" alt="GT"> GT</td>
+                            <td>Tue, May 06</td>
+                            <td>7:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(55)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td><img src="Logos/kkr_logo.png" class="team-logo" alt="KKR"> KKR vs <img
+                                    src="Logos/csk_logo.jpg" class="team-logo" alt="CSK"> CSK</td>
+                            <td>Wed, May 07</td>
+                            <td>7:30 PM</td>
+                            <td>Eden Gardens, Kolkata</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(56)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/dc_logo.png"
+                                    class="team-logo"> DC</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(57)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo"> LSG vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo"> RCB</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(58)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo"> SRH vs <img src="Logos/kkr_logo.png"
+                                    class="team-logo"> KKR</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(59)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>61</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo"> MI</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(60)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>62</td>
+                            <td><img src="Logos/dc_logo.png" class="team-logo"> DC vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo"> GT</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(61)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>63</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo"> CSK vs <img src="Logos/rr_logo.jpg"
+                                    class="team-logo"> RR</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(62)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo"> RCB vs <img src="Logos/srh_logo.jpg"
+                                    class="team-logo"> SRH</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(63)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo"> LSG vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo"> GT</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(64)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>66</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo"> MI vs <img src="Logos/dc_logo.png"
+                                    class="team-logo"> DC</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(65)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>67</td>
+                            <td><img src="Logos/rr_logo.jpg" class="team-logo"> RR vs <img src="Logos/pbks_logo.jpg"
+                                    class="team-logo"> PBKS</td>
+                            <td>- - -</td>
+                            <td>- - -</td>
+                            <td>
+                                <div class="suspended">Suspended</div>
+                            </td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(66)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>68</td>
+                            <td><img src="Logos/rcb_logo.png" class="team-logo"> RCB vs <img src="Logos/kkr_logo.png"
+                                    class="team-logo"> KKR</td>
+                            <td>Sat, May 17</td>
+                            <td>7:30 PM</td>
+                            <td>M Chinnaswamy Stadium, Bengaluru</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(67)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>69</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/rr_logo.jpg"
+                                    class="team-logo"> RR</td>
+                            <td>Sun, May 18</td>
+                            <td>3:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(68)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>70</td>
+                            <td><img src="Logos/dc_logo.png" class="team-logo"> DC vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo"> GT</td>
+                            <td>Sun, May 18</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(69)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>71</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo"> LSG vs <img src="Logos/srh_logo.jpg"
+                                    class="team-logo"> SRH</td>
+                            <td>Mon, May 19</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(70)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>72</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo"> CSK vs <img src="Logos/rr_logo.jpg"
+                                    class="team-logo"> RR</td>
+                            <td>Tue, May 20</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(71)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>73</td>
+                            <td><img src="Logos/mi_logo.jpg" class="team-logo"> MI vs <img src="Logos/dc_logo.png"
+                                    class="team-logo"> DC</td>
+                            <td>Wed, May 21</td>
+                            <td>7:30 PM</td>
+                            <td>Wankhede Stadium, Mumbai</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(72)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>74</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo"> LSG vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo"> GT</td>
+                            <td>Thu, May 22</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(73)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo"> SRH vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo"> RCB</td>
+                            <td>Fri, May 23</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(74)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>76</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/dc_logo.png"
+                                    class="team-logo"> DC</td>
+                            <td>Sat, May 24</td>
+                            <td>7:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(75)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>77</td>
+                            <td><img src="Logos/csk_logo.jpg" class="team-logo"> CSK vs <img src="Logos/gt_logo.jpg"
+                                    class="team-logo"> GT</td>
+                            <td>Sun, May 25</td>
+                            <td>3:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(76)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>78</td>
+                            <td><img src="Logos/srh_logo.jpg" class="team-logo"> SRH vs <img src="Logos/kkr_logo.png"
+                                    class="team-logo"> KKR</td>
+                            <td>Sun, May 25</td>
+                            <td>7:30 PM</td>
+                            <td>Arun Jaitley Stadium, Delhi</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(77)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>79</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo"> MI</td>
+                            <td>Mon, May 26</td>
+                            <td>7:30 PM</td>
+                            <td>Sawai Mansingh Stadium, Jaipur</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(78)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>80</td>
+                            <td><img src="Logos/lsg_logo.jpg" class="team-logo"> LSG vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo"> RCB</td>
+                            <td>Tue, May 27</td>
+                            <td>7:30 PM</td>
+                            <td>BRSABV Ekana Cricket Stadium, Lucknow</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(79)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>81</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo"> RCB <br><br> (QUALIFIER 1)</td>
+                            <td>Thu, May 29</td>
+                            <td>7:30 PM</td>
+                            <td>New PCA Stadium, Chandigarh</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(80)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>82</td>
+                            <td><img src="Logos/gt_logo.jpg" class="team-logo"> GT vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo"> MI <br><br>(ELIMINATOR)</td>
+                            <td>Fri, May 30</td>
+                            <td>7:30 PM</td>
+                            <td>New PCA Stadium, Chandigarh</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(81)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>83</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/mi_logo.jpg"
+                                    class="team-logo"> MI <br><br> (QUALIFIER 2)</td>
+                            <td>Sun, Jun 1</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(82)">View Scorecard</button></td>
+                        </tr>
+                        <tr>
+                            <td>84</td>
+                            <td><img src="Logos/pbks_logo.jpg" class="team-logo"> PBKS vs <img src="Logos/rcb_logo.png"
+                                    class="team-logo"> RCB <br><br> (FINAL)</td>
+                            <td>Tue, Jun 3</td>
+                            <td>7:30 PM</td>
+                            <td>Narendra Modi Stadium, Ahmedabad</td>
+                            <td><button class="scorecard-btn" onclick="openScorecard(83)">View Scorecard</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- View 2: Points Table (Initially hidden) -->
+            <div id="points-table-view" class="view-content" style="display:none;">
+                <table class="points-table">
+                    <thead>
+                        <tr>
+                            <th>POS</th>
+                            <th>TEAM</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>NR</th>
+                            <th>NRR</th>
+                            <th>FOR</th>
+                            <th>AGAINST</th>
+                            <th>PTS</th>
+                            <th>RECENT FORM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="points-table-body">
+                        <!-- Rows will be injected by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- View 3: Playoffs (NEW SIMPLIFIED LAYOUT) -->
+            <div id="playoffs-view" class="view-content" style="display:none;">
+                <div class="playoff-flow">
+                    <!-- Qualifier 1 -->
+                    <div class="playoff-card">
+                        <div class="matchup-header">Qualifier 1 - May 29</div>
+                        <div class="team winner"><img src="Logos/rcb_logo.png" class="team-logo"> Royal Challengers Bengaluru
+                        </div>
+                        <div class="team"><img src="Logos/pbks_logo.jpg" class="team-logo"> Punjab Kings</div>
+                        <div class="match-outcome"><span class="arrow">→</span> RCB wins and goes to Final</div>
+                        <div class="match-outcome"><span class="arrow">→</span> PBKS loses and goes to Qualifier 2</div>
+                    </div>
+
+                    <!-- Eliminator -->
+                    <div class="playoff-card">
+                        <div class="matchup-header">Eliminator - May 30</div>
+                        <div class="team"><img src="Logos/gt_logo.jpg" class="team-logo"> Gujarat Titans</div>
+                        <div class="team winner"><img src="Logos/mi_logo.jpg" class="team-logo"> Mumbai Indians</div>
+                        <div class="match-outcome"><span class="arrow">→</span> MI wins and goes to Qualifier 2</div>
+                        <div class="match-outcome"><span class="arrow">→</span> GT is eliminated</div>
+                    </div>
+
+                    <!-- Qualifier 2 -->
+                    <div class="playoff-card">
+                        <div class="matchup-header">Qualifier 2 - Jun 01</div>
+                        <div class="team"><img src="Logos/mi_logo.jpg" class="team-logo"> Mumbai Indians</div>
+                        <div class="team winner"><img src="Logos/pbks_logo.jpg" class="team-logo"> Punjab Kings</div>
+                        <div class="match-outcome"><span class="arrow">→</span> PBKS wins and goes to Final</div>
+                        <div class="match-outcome"><span class="arrow">→</span> MI is eliminated</div>
+                    </div>
+
+                    <!-- Final -->
+                    <div class="playoff-card final-card">
+                        <div class="matchup-header">Final - Jun 03</div>
+                        <div class="team winner"><img src="Logos/rcb_logo.png" class="team-logo"> Royal Challengers Bengaluru
+                        </div>
+                        <div class="team"><img src="Logos/pbks_logo.jpg" class="team-logo"> Punjab Kings</div>
+                        <img src="Logos/IPL_Trophy.png" alt="Trophy" class="trophy-icon">
+                        <div class="match-outcome"><span class="arrow">→</span> RCB wins</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="separator1"></div>
+
+        <div class="squad-container csk">
+            <div class="squad-image">
+                <img src="Squad Images/csk_squad.jpg" alt="Chennai Super Kings Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>CHENNAI SUPER KINGS</u></h2>
+                <p>MS Dhoni(WK), Ruturaj Gaikwad(C), Andre Siddarth, Devon Conway, Rahul Tripathi, Shaik Rasheed, Deepak
+                    Hooda, Jamie Overton, Rachin Ravindra, Ramakrishna Ghosh, Ravichandran Ashwin, Ravindra Jadeja, Sam
+                    Curran, Shivam Dube, Vijay Shankar, Vansh Bedi(WK), Anshul Kamboj, Gurjapneet Singh, Kamlesh
+                    Nagarkoti,
+                    Khaleel Ahmad, Matheesha Pathirana, Mukesh Choudhary, Nathan Ellis, Noor Ahmad, Shreyas Gopal </p>
+                <a href="Teams/CSK/csk_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator2"></div>
+
+        <div class="squad-container srh">
+            <div class="squad-image">
+                <img src="Squad Images/srh_squad.jpg" alt="Sunrisers Hyderabad Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>SUNRISERS HYDERABAD</u></h2>
+                <p>Abhishek Sharma, Heinrich Klaasen(WK), Abhinav Manohar, Aniket Verma, Atharva Taide, Sachin Baby,
+                    Travis
+                    Head, Kamindu Mendis, Nitish Kumar Reddy, Wiaan Mulder, Ishan Kishan(WK), Adam Zampa, Eshan Malinga,
+                    Harshal patel, Jaydev Unadkat, Mohammed Shami, Pat Cummins(C), Rahul Chahar, Simarjeet Singh,
+                    Zeeshan
+                    Ansari. </p>
+                <a href="Teams/SRH/srh_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator3"></div>
+
+        <div class="squad-container mi">
+            <div class="squad-image">
+                <img src="Squad Images/mi_squad.jpg" alt="Mumbai Indians Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>MUMBAI INDIANS</u></h2>
+                <p>Rohit Sharma, Bevon Jacobs, Suryakumar Yadav, Tilak Verma, Corbin Bosch, Hardik Pandya(C), Mitchell
+                    Santner, Naman Dhir, Raj Bawa, Will Jacks, Robin Minz(WK), Ryan Rickleton(WK), Krishna Shrijith(WK),
+                    Arjun Tendulkar, Ashwani Kumar, Deepak Chahar, Jasprit Bumrah, Karn Sharma, Mujeeb Ur Rahman, Reece
+                    Topley, Satyanarayana Raju, Trent Boult, Vignesh Puthur. </p>
+                <a href="Teams/MI/mi_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator4"></div>
+
+        <div class="squad-container kkr">
+            <div class="squad-image">
+                <img src="Squad Images/kkr_squad.png" alt="Kolkata Knight Riders Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>KOLKATA KNIGHT RIDERS</u></h2>
+                <p>Ajinkya Rahane(C), Angkrish Raghuvanshi, Manish Pandey, Ramandeep Singh, Rinku Singh, Andre Russell,
+                    Anukul Roy, Moeen Ali, Rovman Powell, Sunil Narine, Venkatesh Iyer, Luvnith Sisodia(WK), Quinton De
+                    Kock(WK), Rahmanullah Gurbaz(WK), Anrich Nortje, Chetan Sakariya, Harshit Rana, Mayank Marakande,
+                    Spencer Johnson, Vaibhav Arora, Varun Chakravarthy.</p>
+                <a href="Teams/KKR/kkr_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="squad-container rcb">
+            <div class="squad-image">
+                <img src="Squad Images/rcb_squad.jpg" alt="Royal Challengers Bangalore Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>ROYAL CHALLENGERS BANGALORE</u></h2>
+                <p>Virat Kohli, Rajat Patidar(C), Swastik Chikara, Phil Salt(WK), Jitesh Sharma(WK), Tim David, Jacob
+                    Bethell, Krunal Pandya,Liam Livingstone, Manoj Bhandage, Mohit Rathee, Romario Shepherd, Swapnil
+                    Singh,
+                    Abhinandan Singh, Bhuvneshwar Kumar, Josh Hazlewood, Lungi Ngidi, Nuwan Thushara, Rasikh Alam,
+                    Suyash
+                    Sharma, Yash Dayal. </p>
+                <a href="Teams/RCB/rcb_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator6"></div>
+
+        <div class="squad-container gt">
+            <div class="squad-image">
+                <img src="Squad Images/gt_squad.jpg" alt="Gujarat Titans Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>GUJARAT TITANS</u></h2>
+                <p>Shubman Gill(C), Wriddhiman Saha(WK), Sai Sudharshan, Shahrukh Khan, Sherfane Rutherford, Arshad
+                    Khan,
+                    Glenn Phillips, Karim Janat, Mahipal Lomror, Nishant Sindhu, Rahul Tewatia, Rashid Khan, Washington
+                    Sundar, Anuj Rawat(WK), Jos Buttler(WK), Kumar Kushagra(WK), Gerald Coetzee, Gurnoor Brar, Ishant
+                    Sharma, Jayant Yadav, Kagiso Rabada, Kulwant Khejroliya, Manav Suthar, Mohammed Siraj, Prasidh
+                    Krishna,
+                    Sai Kishore.</p>
+                <a href="Teams/GT/gt_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator5"></div>
+
+        <div class="squad-container rr">
+            <div class="squad-image">
+                <img src="Squad Images/rr_squad.jpg" alt="Rajasthan Royals Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>RAJASTHAN ROYALS</u></h2>
+                <p>Sanju Samson(C & WK), Nitish Rana, Shimron Hetmyer, Shubham Dubey, Yashasvi Jaiswal, Riyan Parag,
+                    Vaibhav
+                    Suryavanshi, Wanindu Hasranga, Yudhvir Singh, Dhruv Jurel(WK), Kunal Singh Rathore(WK), Akash
+                    Madhwal,
+                    Ashok Sharma, Fazalhaq Farooqi, Jofra Archer, Kumar Kartikeya, Kwena Maphaka, Maheesh Theekshana,
+                    Sandeep Sharma, Tushar Deshpande. </p>
+                <a href="Teams/RR/rr_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator8"></div>
+
+        <div class="squad-container dc">
+            <div class="squad-image">
+                <img src="Squad Images/dc_squad.jpg" alt="Delhi Capitals Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>DELHI CAPITALS</u></h2>
+                <p>Ashutosh Sharma, Faf Du Plessis, Jake Fraser-McGurk, Karun Nair, Sameer Rizvi, Ajay Mandal, Axar
+                    Patel(C), Madhav Tiwari, Manvanth Kumar, Tripurana Vijay, Abhishek Porel(WK), Donovan Ferreira(WK),
+                    KL
+                    Rahul(WK), Tristan Stubbs(WK), Darshan Nalkande, Dushmantha Chameera, Kuldeep Yadav, Mitchell Starc,
+                    Mohit Sharma, Mukesh Kumar, T. Natarajan, Vipraj Nigam.</p>
+                <a href="Teams/DC/dc_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator9"></div>
+
+        <div class="squad-container pbks">
+            <div class="squad-image">
+                <img src="Squad Images/pbks_squad.jpg" alt="Punjab Kings Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>PUNJAB KINGS</u></h2>
+                <p>Harnoor Singh, Nehal Wadhera, Priyansh Arya, Pyla Avinash, Shashank Singh, Shreyas Iyer(C), Aaron
+                    Hardie,
+                    Azmatullah Omarzai, Glenn Maxwell, Marco Jansen, Marcus Stoinis, Musheer Khan, Suryansh Shedge, Josh
+                    Inglis(WK), Prabhsimran Singh(WK), Vishnu Vinod(WK), Arshdeep Singh, Harpreet Brar, Kuldeep Sen,
+                    Lockie
+                    Ferguson, Praveen Dubey, Vyshak Vijay Kumar, Xavier Bartlett, Yash Thakur, Yuzvendra Chahal. </p>
+                <a href="Teams/PBKS/pbks_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="separator7"></div>
+
+        <div class="squad-container lsg">
+            <div class="squad-image">
+                <img src="Squad Images/lsg_squad.jpg" alt="Lucknow Super Giants Squad" class="squad-img">
+            </div>
+            <div class="squad-details">
+                <h2 class="team-name"><u>LUCKNOW SUPER GIANTS</u></h2>
+                <p>Aiden Markram, Ayush Badoni, David Miller, Himmat Singh, Matthew Breetzke, Abdul Samad, Arshin
+                    Kulkarni,
+                    Mitchell Marsh, Prince Yadav, Rajvardhan Hangargekar, Shahbaz Ahmed, Shardul Thakur, Yuvraj
+                    Chaudhary,
+                    Aryan Juyal(WK), Nicholas Pooran(WK), Rishabh Pant(WK), Akash Deep, Akash Singh, Avesh Khan, Digvesh
+                    Singh, M Sidhharth, Mayank Yadav, Ravi Bishnoi, Shamar Joseph. </p>
+                <a href="Teams/LSG/lsg_index.html" target="_blank" rel="noopener noreferrer">
+                    <button class="squad-button">View Squad</button>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/rahulkr_1623?igsh=MXFkdTRlYWVyemJxdQ==" class="social-icon instagram"
+                    target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/rahul-kumar-5b313b30b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    class="social-icon linkedin" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Rahul-kr1623" class="social-icon github" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+            <p>© Developed and Designed by Rahul.</p>
+            <p class="copyright">© 2025 IPL. All Rights Reserved.</p>
+        </footer>
+
+        <!-- NEW FULLY DESCRIPTIVE SCORECARD MODAL -->
+        <div id="scorecard-modal" class="modal-overlay" style="display:none;">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeScorecard()">&times;</span>
+                <div class="scorecard-header">
+                    <div class="scorecard-team">
+                        <img id="modal-team1-logo" src="" alt="">
+                        <h3 id="modal-team1-name"></h3>
+                        <p id="modal-team1-score" class="score"></p>
+                    </div>
+                    <div class="versus">vs</div>
+                    <div class="scorecard-team">
+                        <img id="modal-team2-logo" src="" alt="">
+                        <h3 id="modal-team2-name"></h3>
+                        <p id="modal-team2-score" class="score"></p>
+                    </div>
+                </div>
+
+                <div class="scorecard-match-info">
+                    <p id="modal-status"></p>
+                </div>
+
+                <div class="scorecard-tabs">
+                    <button id="tab-btn-1" class="scorecard-tab-btn active" onclick="showInning(1)"></button>
+                    <button id="tab-btn-2" class="scorecard-tab-btn" onclick="showInning(2)"></button>
+                </div>
+
+                <div class="scorecard-body">
+                    <!-- Innings 1 -->
+                    <div id="inning-1" class="inning-content">
+                        <div class="score-table-container">
+                            <table class="score-table batting-table">
+                                <thead>
+                                    <tr>
+                                        <th>Batsman</th>
+                                        <th>R</th>
+                                        <th>B</th>
+                                        <th>4s</th>
+                                        <th>6s</th>
+                                        <th>SR</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modal-inning1-batting-body"></tbody>
+                            </table>
+                        </div>
+                        <div class="inning-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Extras</span>
+                                <div class="detail-data">
+                                    <span id="inning1-extras-total"></span>
+                                    <span id="inning1-extras-details" class="detail-sub-data"></span>
+                                </div>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Total runs</span>
+                                <div class="detail-data">
+                                    <span id="inning1-total-score"></span>
+                                    <span id="inning1-total-details" class="detail-sub-data"></span>
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <span class="detail-label">Yet to bat</span>
+                                <span id="inning1-yet-to-bat" class="detail-data"></span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="detail-label">Fall of wickets</span>
+                                <span id="inning1-fow" class="detail-data"></span>
+                            </div>
+                        </div>
+                        <div class="score-table-container">
+                            <table class="score-table bowling-table">
+                                <thead>
+                                    <tr>
+                                        <th>Bowler</th>
+                                        <th>O</th>
+                                        <th>M</th>
+                                        <th>R</th>
+                                        <th>W</th>
+                                        <th>Econ</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modal-inning1-bowling-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Innings 2 -->
+                    <div id="inning-2" class="inning-content" style="display: none;">
+                        <div class="score-table-container">
+                            <table class="score-table batting-table">
+                                <thead>
+                                    <tr>
+                                        <th>Batsman</th>
+                                        <th>R</th>
+                                        <th>B</th>
+                                        <th>4s</th>
+                                        <th>6s</th>
+                                        <th>SR</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modal-inning2-batting-body"></tbody>
+                            </table>
+                        </div>
+                        <div class="inning-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Extras</span>
+                                <div class="detail-data">
+                                    <span id="inning2-extras-total"></span>
+                                    <span id="inning2-extras-details" class="detail-sub-data"></span>
+                                </div>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Total runs</span>
+                                <div class="detail-data">
+                                    <span id="inning2-total-score"></span>
+                                    <span id="inning2-total-details" class="detail-sub-data"></span>
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <span class="detail-label">Yet to bat</span>
+                                <span id="inning2-yet-to-bat" class="detail-data"></span>
+                            </div>
+                            <div class="detail-block">
+                                <span class="detail-label">Fall of wickets</span>
+                                <span id="inning2-fow" class="detail-data"></span>
+                            </div>
+                        </div>
+                        <div class="score-table-container">
+                            <table class="score-table bowling-table">
+                                <thead>
+                                    <tr>
+                                        <th>Bowler</th>
+                                        <th>O</th>
+                                        <th>M</th>
+                                        <th>R</th>
+                                        <th>W</th>
+                                        <th>Econ</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modal-inning2-bowling-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="scorecard-footer">
+                    <p><strong>Toss:</strong> <span id="modal-toss"></span></p>
+                    <p><strong>Venue:</strong> <span id="modal-venue"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
