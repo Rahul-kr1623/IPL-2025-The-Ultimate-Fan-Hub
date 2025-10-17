@@ -1,0 +1,192 @@
+/* Prevent horizontal scrolling */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure all content stays within the viewport */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.home-button {
+    text-decoration: none;
+    background-color: violet;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+.home-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1); /* Slightly enlarges */
+    filter: drop-shadow(5px 5px 15px violet);
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: violet;
+    text-shadow: 3px 3px 7px violet;
+    text-align: center;
+    margin: 0;
+    flex-grow: 1; /* Allows title to take available space */
+}
+
+.players-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border: 3px solid violet;
+    border-radius: 15px;
+    background-color: rgba(138, 43, 226, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.player-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+.player-image:hover {
+    transform: scale(1.2) translateY(-10px);
+    filter: drop-shadow(0px 0px 15px violet);
+}
+
+.player-info {
+    flex-grow: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.player-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: violet;
+    text-shadow: 2px 2px 5px violet;
+}
+
+.player-role {
+    font-size: 18px;
+    color: white;
+    margin-top: 5px;
+}
+
+.player-stats {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 28px;
+        margin-bottom: 15px; /* Add space below title on mobile */
+        width: 100%; /* Ensure it takes full width before button wraps */
+    }
+    
+    header {
+        justify-content: center; /* Center items when they stack */
+    }
+
+    .player-card {
+        width: 95%; /* Use more width on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .player-card {
+        flex-direction: column; /* Stack image and info vertically */
+        text-align: center;
+    }
+    
+    .player-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; /* Circular image for mobile */
+        margin-bottom: 15px; /* Space between image and info */
+    }
+
+    .player-image:hover {
+        transform: scale(1.1); /* Simplify hover for mobile */
+        filter: drop-shadow(0px 0px 10px violet);
+    }
+    
+    .player-info {
+        padding-left: 0; /* Remove side padding */
+        text-align: center; /* Center the text */
+    }
+
+    .player-name {
+        font-size: 24px;
+    }
+
+    .player-role, .player-stats {
+        font-size: 16px;
+    }
+}
+@media (max-width: 400px) {
+    .home-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .team-title {
+        font-size: 22px;
+    }
+
+    .player-card {
+        width: 100%; /* Full width on small screens */
+        padding: 15px;
+    }
+
+    .player-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .player-name {
+        font-size: 20px;
+    }
+
+    .player-role, .player-stats {
+        font-size: 14px;
+    }
+}
